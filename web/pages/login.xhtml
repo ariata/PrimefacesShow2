@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:include src="head.xhtml" ></ui:include>
+    <h:body>
+        <h:form id="formLogin">
+            <p:growl id="messages"/>
+            <p:panelGrid styleClass="sinborder" style="width: 100%;">
+                <p:row>
+                    <p:column styleClass="ui-widget-header" style="padding-left: 50px;">
+                        <p:graphicImage value="/images/logoBlanco.png" style="width: 100px"/>
+                    </p:column>
+                </p:row>
+            </p:panelGrid>
+            <p:panelGrid style="width: 440px;height: 150px;margin: 70px 315px;" id="panelLogin">
+                <p:row>
+
+                    <p:column style="text-align: center;">
+                        <p:inputText id="usuario" value="#{loginBean.user}" style="width: 200px;">
+                            <p:watermark for="usuario" value="Usuario" id="watUser" />
+                            <p:ajax partialSubmit="true"/>
+                        </p:inputText>
+                    </p:column>
+                </p:row>
+                <p:row>
+                    <p:column style="text-align: center;">
+                        <p:password id="password" value="#{loginBean.pass}" style="width: 200px;">
+                            <p:watermark for="password" value="Contraseña" id="watPass" />
+                            <p:ajax partialSubmit="true"/>
+                        </p:password>
+                    </p:column>
+                </p:row>
+
+                <p:row>
+
+                    <p:column style="text-align: center;">
+                        <p:commandButton styleClass="boton" 
+                                         update=":formLogin:panelLogin :formLogin:messages"
+                                         value="Ingresar" actionListener="#{loginBean.login}">
+                        </p:commandButton>
+                    </p:column>
+                </p:row>
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

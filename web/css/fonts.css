@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 24, 2018, 10:14:07 PM
+    Author     : Ariad
+*/
+@font-face {
+    font-family: "HelveticaCon";
+    font-style: normal;
+    font-weight: normal;
+    src: local("?"), 
+        url("../fonts/OpenSans-CondLight-webfont.woff") format('woff'),
+        url("../fonts/OpenSans-CondLight-webfont.eot") format("eot"),
+        url("../fonts/OpenSans-CondLight-webfont.svg") format("svg"),
+        url("../fonts/OpenSans-CondLight-webfont.ttf") format("truetype");
+}
+
+.ui-outputlabel, table, .boton, span, .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button,
+.ui-widget{
+    font-family: HelveticaCon;
+    font-size: 11pt;
+}
+
+.titulo20{
+    font-size: 20px!important;
+}

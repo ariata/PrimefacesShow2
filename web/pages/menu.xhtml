@@ -1,0 +1,40 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:form id="formMenu">
+
+        <p:panelGrid styleClass="sinborder" style="width: 100%;">
+            <p:row>
+                <p:column colspan="3" style="text-align: center;" styleClass="ui-widget-header">
+                    <p:graphicImage value="../../images/logoBlanco.png" style="width: 100px"/>
+                </p:column>
+                <p:column style="text-align: center;width: 800px;" styleClass="ui-widget-header">
+                    <p:tabMenu  id="tabIndex" activeIndex="#{menuBean.seleccion}">
+                        <p:menuitem  value="Tablas" actionListener="#{menuBean.onTabChange}" >
+                            <f:attribute name="seleccion" value="tablas" />
+                        </p:menuitem>
+                        <p:menuitem  value="Botones" actionListener="#{menuBean.onTabChange}" >
+                            <f:attribute name="seleccion" value="botones" />
+                        </p:menuitem>
+                        <p:menuitem  value="Dialogos" actionListener="#{menuBean.onTabChange}" >
+                            <f:attribute name="seleccion" value="dialogos" />
+                        </p:menuitem>
+                        <p:menuitem  value="Imágenes" actionListener="#{menuBean.onTabChange}" >
+                            <f:attribute name="seleccion" value="imageges" />
+                        </p:menuitem>
+                    </p:tabMenu >
+                </p:column>
+                <p:column styleClass="ui-widget-header">
+                    <p:commandButton styleClass="boton" 
+                                     value="Salir" actionListener="#{loginBean.logout}">
+                    </p:commandButton>
+                </p:column>
+            </p:row>
+        </p:panelGrid>
+
+    </h:form>
+</ui:composition>
